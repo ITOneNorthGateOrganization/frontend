@@ -13,11 +13,6 @@ const LoginPage = observer(() => {
 
     return (
         <div className={styles.logBg}>
-            <div>
-                <img src={FirstBlob} className={styles.logFirstBlob}/>
-                <img src={SecondBlob} className={styles.logSecondBlob}/>
-                <img src={ThirdBlob} className={styles.logThirdBlob}/>
-            </div>
             <div className={styles.logPosition}>
                 <div className={styles.logBlock}>
                     <div className={styles.logBlockContent}>
