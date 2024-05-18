@@ -5,6 +5,7 @@ import {RegistrationPage} from '../pages/registration-page';
 import {LoginPage} from '../pages/login-page';
 import {AccountPage} from '../pages/account-page';
 import {BudgetPage} from '../pages/budget-page';
+import {ReportPage} from '../pages/report-page';
 import {HomeLayout, MainLayout} from '../shared/ui';
 
 export const router = createBrowserRouter([
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: '/budget',
         element: <BudgetPage/>
+      },
+      {
+        path: '/report',
+        element: <ReportPage/>
       },
     ]
   },

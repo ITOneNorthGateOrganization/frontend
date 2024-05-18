@@ -36,7 +36,7 @@ const SideBar = () => {
 
             <div className={styles.sidePointItem}>
                 <img src={sidePointReport}/>
-                <Link to='/budget'
+                <Link to='/report'
                       className={styles.sidePointText}>
                     Отчеты
                 </Link>

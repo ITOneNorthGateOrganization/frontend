@@ -13,9 +13,25 @@ const TransactionEditModal = observer(({open}: {open: [boolean, React.Dispatch<R
         setOpenDialog(false);
       }}
     >
-      <div className={styles.modMain}>
-        test
-      </div>
+        <div className={styles.modMain}>
+            <div className={styles.modMainTitle}>
+                Добавление транзакции
+            </div>
+
+            <input
+                className={styles.modInputStyle}
+                type="text"
+                placeholder={'Описание'}/>
+
+            <input
+                className={styles.modInputStyle}
+                type="text"
+                placeholder={'Количество'}/>
+
+            <button className={styles.modButton}>
+                Создать
+            </button>
+        </div>
     </dialog>
   );
 });
