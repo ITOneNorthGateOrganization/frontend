@@ -4,8 +4,9 @@ import {useRootStore} from '../../../shared/models/RootStoreProvider';
 import styles from './styles.module.css';
 import IconAdd from "../../../shared/icons/iconAdd.svg";
 
-const AccountCategories = observer(() => {
+const AccountCategories = observer(({openEdit}: {openEdit: [boolean, React.Dispatch<React.SetStateAction<boolean>>]}) => {
     const {accountStore, transactionStore, categoryStore} = useRootStore();
+    const [open, setOpen] = openEdit;
 
     useEffect(() => {
         accountStore.getAccounts();
@@ -21,7 +22,13 @@ const AccountCategories = observer(() => {
                 <div className={styles.catBlockTitle}>
                     Категории расходов
                 </div>
-                <img src={IconAdd}/>
+                <img
+                  src={IconAdd}
+                  className={styles.catAddButton}
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                />
             </div>
             <div className={styles.catList}>
                 {categoryStore.categories.map((category) => (

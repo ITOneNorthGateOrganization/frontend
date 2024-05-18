@@ -10,6 +10,6 @@ export const signIn = async ({username, password}: Auth): Promise<UserSignIn> =>
 };
 
 export const signUp = async ({username, password, email}: Auth) => {
-  const {data} = await ApiInstance.post(`${BASE_URL}/signup`, {username: username, password: password, email: email});
+  const {data} = await ApiInstance.post(`${BASE_URL}/signUp`, {username: username, password: password, email: email});
   return data.toString();
 };

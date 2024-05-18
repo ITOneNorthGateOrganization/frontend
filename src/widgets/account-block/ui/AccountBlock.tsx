@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import {observer} from 'mobx-react-lite';
 import {useRootStore} from '../../../shared/models/RootStoreProvider';
-import {AccountModal} from '../../../widgets/account-modal';
 import IconAdd from "../../../shared/icons/iconAdd.svg";
 import IconMoney from "../../../shared/icons/iconMoney.svg";
 import styles from './styles.module.css';
 
-const AccountBlock = observer(() => {
+const AccountBlock = observer(({openEdit}: {openEdit: [boolean, React.Dispatch<React.SetStateAction<boolean>>]}) => {
     const {accountStore, transactionStore, categoryStore} = useRootStore();
+  const [openDialog, setOpenDialog] = openEdit;
 
     useEffect(() => {
         accountStore.getAccounts();
@@ -23,7 +23,12 @@ const AccountBlock = observer(() => {
                 <div className={styles.accBlockTitle}>
                     Счета
                 </div>
-                <img src={IconAdd}/>
+                <img
+                  className={styles.accAddButton}
+                  src={IconAdd}
+                  onClick={() => {
+                  setOpenDialog(true);
+                }}/>
             </div>
             <div className={styles.accBlockText}>
                 {accountStore.accounts.map((account) => (

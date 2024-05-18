@@ -1,15 +1,3 @@
-/*Жирный*/
-@font-face {
-    font-family: 'SF Pro Display Bold';
-    src: url(../../../shared/fonts/SF-Pro-Display-Bold.otf);
-}
-
-/*Средний*/
-@font-face {
-    font-family: 'SF Pro Display Medium';
-    src: url(../../../shared/fonts/SF-Pro-Display-Medium.otf);
-}
-
 .tranBlock {
     display: flex;
     flex-direction: column;
@@ -19,7 +7,8 @@
     border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.10000000149011612)) 1;
     border-radius: 20px;
     padding: 0px 20px 0px 20px;
-    max-width: 626px;
+    width: 100%;
+    max-width: 680px;
     height: 260px;
 }
 
@@ -27,15 +16,21 @@
     font-family: 'SF Pro Display Bold';
     font-size: 20px;
     color: #FFFFFF;
+}
+
+.tranBlockTitlePos {
+    display: flex;
+    justify-content: space-between;
     padding-top: 20px;
     margin-bottom: 20px;
-    width: 100vw;
-    max-width: 100%;
 }
 
 .tranBlockText {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    scrollbar-color: #74fbd3 transparent;
+    scrollbar-width: thin;
 }
 
 .tranBlockTextInfo {
@@ -59,4 +54,8 @@
     &.rate {
         color: #FF7B7B;
     }
+}
+
+.catAddButton {
+    cursor: pointer;
 }

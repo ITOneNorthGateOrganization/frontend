@@ -1,0 +1,27 @@
+.modWrapper {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(3px) brightness(100%);
+  background-color: #ffffff8f;
+  border: none;
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.10000000149011612)) 1;
+}
+
+.modMain {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 80vh;
+  backdrop-filter: blur(35px) brightness(100%);
+  background-color: #ffffffff;
+  -webkit-box-shadow: 6px 6px 36px 10px rgba(0,0,0,0.39);
+  -moz-box-shadow: 6px 6px 36px 10px rgba(0,0,0,0.39);
+  box-shadow: 6px 6px 36px 10px rgba(0,0,0,0.39);
+  border-radius: 20px;
+  padding: 10px;
+  margin: auto;
+}

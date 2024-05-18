@@ -70,4 +70,7 @@
     font-family: 'SF Pro Display Regular';
     font-size: 20px;
     backdrop-filter: blur(9px);
+    &.load {
+         background-color: #7aa2dc;
+     }
 }

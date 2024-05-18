@@ -1,15 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useRootStore} from '../../../shared/models/RootStoreProvider';
 import {observer} from 'mobx-react-lite';
 import {useNavigate} from 'react-router-dom';
-import styles from "../../login-page/ui/styles.module.css";
-import FirstBlob from "../../../shared/images/FirstBlob.svg";
-import SecondBlob from "../../../shared/images/SecondBlob.svg";
-import ThirdBlob from "../../../shared/images/ThirdBlob.svg";
+import styles from '../../login-page/ui/styles.module.css';
 
 const LoginPage = observer(() => {
     const {userStore, authStore} = useRootStore();
     const navigate = useNavigate();
+    const [loading, setLoading] = useState<boolean>(false);
+
+    useEffect(() => {
+      if ((userStore?.user?.id ?? 0) === -1) {
+        alert('Ошибка!');
+        userStore.user.id = 0;
+        setLoading(false);
+      }
+      else if ((userStore?.user?.id ?? 0) !== 0) {
+        navigate('/accounts');
+      }
+    }, [userStore.user.id]);
 
     return (
         <div className={styles.logBg}>
@@ -41,11 +50,13 @@ const LoginPage = observer(() => {
                         />
 
                         <button
-                            className={styles.logButton}
-                            onClick={() => {userStore.signIn(authStore.auth);authStore.reset();
-                            navigate('/accounts');
+                            className={styles.logButton + ' ' + (loading ? styles.load : '')}
+                            onClick={(e) => {
+                                userStore.signIn(authStore.auth);
+                                authStore.reset();
+                                setLoading(true);
                         }}>
-                            Войти
+                          { loading ? 'Загрузка...' : 'Войти'}
                         </button>
                     </div>
                 </div>
