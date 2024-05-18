@@ -1,0 +1,64 @@
+/*Жирный*/
+@font-face {
+    font-family: 'SF Pro Display Bold';
+    src: url(../../../shared/fonts/SF-Pro-Display-Bold.otf);
+}
+
+/*Средний*/
+@font-face {
+    font-family: 'SF Pro Display Medium';
+    src: url(../../../shared/fonts/SF-Pro-Display-Medium.otf);
+}
+
+/*Обычный*/
+@font-face {
+    font-family: 'SF Pro Display Regular';
+    src: url(../../../shared/fonts/SF-Pro-Display-Regular.otf);
+}
+
+body {
+    background: #4A8FE7;
+}
+
+.sideBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 310px;
+    height: 100vh;
+    background: #FFFFFF;
+}
+
+.sideTitle {
+    font-family: 'SF Pro Display Bold';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sideTitlePosition {
+    display: flex;
+    align-items: center;
+    margin: 50px 0px 50px 35px;
+    gap: 20px;
+}
+
+.sidePoint {
+    display: flex;
+    flex-direction: column;
+    font-family: 'SF Pro Display Regular';
+    font-size: 16px;
+    gap: 25px;
+}
+
+.sidePointText {
+    color: #000000;
+    text-decoration: none;
+}
+
+.sidePointItem {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    gap: 10px;
+}

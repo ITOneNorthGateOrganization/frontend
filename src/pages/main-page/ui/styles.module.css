@@ -1,0 +1,137 @@
+/*Жирный*/
+@font-face {
+  font-family: 'SF Pro Display Bold';
+  src: url(../../../shared/fonts/SF-Pro-Display-Bold.otf);
+}
+
+/*Средний*/
+@font-face {
+  font-family: 'SF Pro Display Medium';
+  src: url(../../../shared/fonts/SF-Pro-Display-Medium.otf);
+}
+
+/*Обычный*/
+@font-face {
+    font-family: 'SF Pro Display Regular';
+    src: url(../../../shared/fonts/SF-Pro-Display-Regular.otf);
+}
+
+.mainBg {
+  width: 100vw;
+  height: 100vh;
+  margin: 0; 
+  background: linear-gradient(rgba(0, 194, 255), rgba(45, 131, 251));
+  background-size:cover;
+}
+
+.mainFirstBlob {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 50%;
+  max-height: 70%;
+}
+
+.mainSecondBlob {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 35%;
+  max-height: 60%;
+}
+
+.mainThirdBlob {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 30%;
+  max-height: 60%;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainContent > :first-child {
+  margin-bottom: 3px;
+}
+
+.mainContent > * {
+  margin-bottom: 20px;
+}
+
+.mainTitle {
+  font-family: 'SF Pro Display Bold';
+  font-size: 128px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mainTitleText {
+  font-family: 'SF Pro Display Regular';
+  font-size: 36px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mainButtons {
+  width: 300px;
+  height: 40px;
+  background-color: rgba(212, 212, 212, 0.5);
+  color: white;
+  border-style: double;
+  border-color: #FFFFFF;
+  border-radius: 50px;
+  font-family: 'SF Pro Display Regular';
+  font-size: 20px;
+  backdrop-filter: blur(9px);
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.mainButtons:last-child {
+  margin-right: 0;
+}
+
+.mainButtonsStyle {
+  width: 35%;
+  min-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 90px;
+  }
+  .mainTitleText {
+  font-size: 28px;
+ }
+}
+
+@media screen and (max-width: 480px) {
+  .mainTitle {
+    font-size: 48px;
+  }
+  .mainTitleText {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mainTitle {
+    font-size: 36px;
+  }
+  .mainTitleText {
+    font-size: 16px;
+  }
+}
