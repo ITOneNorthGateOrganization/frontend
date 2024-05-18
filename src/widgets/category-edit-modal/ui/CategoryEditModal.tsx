@@ -6,17 +6,28 @@ const CategoryEditModal = observer(({open}: {open: [boolean, React.Dispatch<Reac
   const [openDialog, setOpenDialog] = open;
 
   return (
-    <dialog
-      open={openDialog}
-      className={styles.modWrapper}
-      onClick={(e) => {
-        setOpenDialog(false);
-      }}
-    >
-      <div className={styles.modMain}>
-        test
-      </div>
-    </dialog>
+      <dialog
+          open={openDialog}
+          className={styles.modWrapper}
+          onClick={(e) => {
+              setOpenDialog(false);
+          }}
+      >
+          <div className={styles.modMain}>
+              <div className={styles.modMainTitle}>
+                  Добавление категории
+              </div>
+
+              <input
+                  className={styles.modInputStyle}
+                  type="text"
+                  placeholder={'Название'}/>
+
+              <button className={styles.modButton}>
+                  Создать
+              </button>
+          </div>
+      </dialog>
   );
 });
 

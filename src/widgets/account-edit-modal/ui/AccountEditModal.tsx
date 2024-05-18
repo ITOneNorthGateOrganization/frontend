@@ -13,9 +13,25 @@ const AccountEditModal = observer(({open}: {open: [boolean, React.Dispatch<React
         setOpenDialog(false);
       }}
     >
-      <div className={styles.modMain}>
-        test
-      </div>
+        <div className={styles.modMain}>
+            <div className={styles.modMainTitle}>
+                Добавление счета
+            </div>
+
+            <input
+                className={styles.modInputStyle}
+                type="text"
+                placeholder={'Название'}/>
+
+            <input
+                className={styles.modInputStyle}
+                type="text"
+                placeholder={'Баланс'}/>
+
+            <button className={styles.modButton}>
+                Создать
+            </button>
+        </div>
     </dialog>
   );
 });
