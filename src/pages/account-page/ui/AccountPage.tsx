@@ -3,9 +3,21 @@ import {observer} from 'mobx-react-lite';
 import {useRootStore} from '../../../shared/models/RootStoreProvider';
 import {SideBar} from '../../../widgets/side-bar';
 import styles from './styles.module.css';
+import {AccountBlock} from '../../../widgets/account-block';
+import {AccountTransactions} from '../../../widgets/account-transactions';
+import {AccountCategories} from '../../../widgets/account-categories';
+import {AccountEditModal} from '../../../widgets/account-edit-modal';
+import {CategoryEditModal} from '../../../widgets/category-edit-modal';
+import {TransactionEditModal} from '../../../widgets/transaction-edit-modal';
 
 const AccountPage = observer(() => {
   const {accountStore, transactionStore, categoryStore} = useRootStore();
+  const openAccount = useState<boolean>(false);
+  const openCategory = useState<boolean>(false);
+  const openTransaction = useState<boolean>(false);
+
+  console.log(accountStore.accounts);
+  console.log(localStorage.getItem('token'))
 
   useEffect(() => {
     accountStore.getAccounts();
@@ -18,46 +30,18 @@ const AccountPage = observer(() => {
   return (
     <div className={styles.accWrapper}>
       <SideBar/>
-      <div>
-        <h3>Счета</h3>
-        {accountStore.accounts.map((account) => (
-          <div
-            key={`${account.id}`}
-            onClick={() => {
-              transactionStore.getTransactions(account.id);
-            }}
-          >
-            <div>
-              {account.name}
-            </div>
-
-            <div>
-              {account.balance}
-            </div>
+      <AccountEditModal open={openAccount}/>
+      <CategoryEditModal open={openCategory}/>
+      <TransactionEditModal open={openTransaction}/>
+      <div className={styles.accMainWrapper}>
+        <div className={styles.accMain}>
+          <div className={styles.accAccountTransaction}>
+            <AccountBlock openEdit={openAccount}/>
+            <AccountTransactions openEdit={openTransaction}/>
           </div>
-        ))}
-      </div>
 
-      <div>
-        <h3>Транзакции</h3>
-        {transactionStore.transactions.map((transaction) => (
-          <div>
-            <div>
-              {transaction.amount}
-            </div>
-
-            <div>
-              {transaction.createAt}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div>
-        <h3>Категории</h3>
-        {categoryStore.categories.map((category) => (
-          <div>{category.name}</div>
-        ))}
+          <AccountCategories openEdit={openCategory}/>
+        </div>
       </div>
     </div>
   );

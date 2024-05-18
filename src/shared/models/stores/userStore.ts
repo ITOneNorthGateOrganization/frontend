@@ -20,11 +20,17 @@ export const createUserStore = (): UserStore => {
     signIn ({username, password}) {
       signIn({username, password}).then((userSingIn) => {
         this.user = userSingIn;
+      }).catch(() => {
+        this.user.id = -1;
       });
     },
     signUp({username, password, email}) {
-      signUp({username, password, email}).then();
-      this.signIn({username, password});
+      signUp({username, password, email}).then(() => {
+        this.signIn({username, password});
+      });
     },
+    meta () {
+      return this._meta;
+    }
   })
 }
