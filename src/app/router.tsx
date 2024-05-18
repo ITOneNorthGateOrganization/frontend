@@ -5,26 +5,37 @@ import {RegistrationPage} from '../pages/registration-page';
 import {LoginPage} from '../pages/login-page';
 import {AccountPage} from '../pages/account-page';
 import {BudgetPage} from '../pages/budget-page';
+import {HomeLayout, MainLayout} from '../shared/ui';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <MainPage/>,
+    element: <MainLayout/>,
+    children: [
+      {
+        path: '/',
+        element: <MainPage/>,
+      },
+      {
+        path: '/registration',
+        element: <RegistrationPage/>
+      },
+      {
+        path: '/login',
+        element: <LoginPage/>
+      },
+    ]
   },
   {
-    path: '/registration',
-    element: <RegistrationPage/>
+    element: <HomeLayout/>,
+    children: [
+      {
+        path: '/accounts',
+        element: <AccountPage/>
+      },
+      {
+        path: '/budget',
+        element: <BudgetPage/>
+      },
+    ]
   },
-  {
-    path: '/login',
-    element: <LoginPage/>
-  },
-  {
-    path: '/accounts',
-    element: <AccountPage/>
-  },
-  {
-    path: '/budget',
-    element: <BudgetPage/>
-  }
   ]);

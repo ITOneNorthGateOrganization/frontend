@@ -1,3 +1,21 @@
+/*Жирный*/
+@font-face {
+  font-family: 'SF Pro Display Bold';
+  src: url(./shared/fonts/SF-Pro-Display-Bold.otf);
+}
+
+/*Средний*/
+@font-face {
+  font-family: 'SF Pro Display Medium';
+  src: url(./shared/fonts/SF-Pro-Display-Medium.otf);
+}
+
+/*Обычный*/
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  src: url(./shared/fonts/SF-Pro-Display-Regular.otf);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

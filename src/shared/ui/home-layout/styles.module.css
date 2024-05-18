@@ -1,0 +1,13 @@
+.mainBg {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background:
+    url("/src/shared/images/FirstBlobHome.svg") left bottom no-repeat,
+    url("/src/shared/images/SecondBlobHome.svg") right top no-repeat,
+    url("/src/shared/images/ThirdBlobHome.svg") right bottom no-repeat,
+    linear-gradient(rgba(0, 194, 255), rgba(45, 131, 251));
+  background-size: 80vmin, 30vmin, 30vmin, cover;
+}

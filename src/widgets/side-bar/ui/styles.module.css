@@ -16,14 +16,9 @@
     src: url(../../../shared/fonts/SF-Pro-Display-Regular.otf);
 }
 
-body {
-    background: #4A8FE7;
-}
-
 .sideBg {
-    position: absolute;
-    left: 0;
-    top: 0;
+    display: flex;
+    flex-direction: column;
     width: 310px;
     height: 100vh;
     background: #FFFFFF;

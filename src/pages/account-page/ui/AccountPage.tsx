@@ -1,8 +1,8 @@
 import React, {Dispatch, useEffect, useState} from 'react';
 import {observer} from 'mobx-react-lite';
 import {useRootStore} from '../../../shared/models/RootStoreProvider';
-import {AccountModal} from '../../../widgets/account-modal';
 import {SideBar} from '../../../widgets/side-bar';
+import styles from './styles.module.css';
 
 const AccountPage = observer(() => {
   const {accountStore, transactionStore, categoryStore} = useRootStore();
@@ -16,7 +16,7 @@ const AccountPage = observer(() => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.accWrapper}>
       <SideBar/>
       <div>
         <h3>Счета</h3>

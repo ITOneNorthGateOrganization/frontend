@@ -32,10 +32,6 @@ const MainPage = () => {
             </button>
           </div>
         </div>
-
-          <img src={FirstBlob} className={styles.mainFirstBlob}/>
-          <img src={SecondBlob} className={styles.mainSecondBlob}/>
-          <img src={ThirdBlob} className={styles.mainThirdBlob}/>
       </div>
   );
 };

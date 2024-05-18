@@ -13,11 +13,6 @@ const RegistrationPage = observer(() => {
 
   return (
       <div className={styles.regBg}>
-          <div>
-              <img src={FirstBlob} className={styles.regFirstBlob}/>
-              <img src={SecondBlob} className={styles.regSecondBlob}/>
-              <img src={ThirdBlob} className={styles.regThirdBlob}/>
-          </div>
           <div className={styles.regPosition}>
               <div className={styles.regBlock}>
                   <div className={styles.regBlockContent}>
