@@ -1,0 +1,141 @@
+.setBlock {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(35px) brightness(100%);
+    background-color: #ffffff8f;
+    border-color: transparent;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.10000000149011612)) 1;
+    border-radius: 20px;
+    padding: 0px 20px 0px 20px;
+    max-width: 628px;
+    height: 910px;
+}
+
+.setBlockTitlePos {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.setBlockTitle {
+    font-family: 'SF Pro Display Bold';
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.setItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.setInputStyle {
+    width: 46%;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: #FFFFFF;
+    outline: none;
+    font-family: 'SF Pro Display Regular';
+    font-size: 16px;
+}
+
+.setItemPeriod {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.setCheckStyle {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.setInputText {
+    font-family: 'SF Pro Display Medium';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.setInputPeriodText {
+    font-family: 'SF Pro Display Medium';
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: end;
+}
+
+.setInputPeriod {
+    width: 5%;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: #FFFFFF;
+    outline: none;
+    font-family: 'SF Pro Display Regular';
+    font-size: 16px;
+}
+
+.setInputPeriodNum {
+    width: 7%;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: #FFFFFF;
+    outline: none;
+    font-family: 'SF Pro Display Medium';
+    font-size: 16px;
+    height: fit-content;
+}
+
+.setInputPeriodCheck {
+    width: 13%;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: #FFFFFF;
+    outline: none;
+    font-family: 'SF Pro Display Medium';
+    font-size: 16px;
+    height: fit-content;
+    text-align: center;
+}
+
+input[type="number" i] {
+    text-align: center;
+    padding: 0;
+    background: transparent;
+}
+
+.setRadio {
+    font-family: 'SF Pro Display Regular';
+    font-size: 16px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0px 0px 0px;
+    flex-direction: column;
+}
+
+.setRadioList {
+    display: flex;
+    align-items: center;
+    margin: 0px 5px 0px 0px;
+}
+
+.setRadioItem {
+    margin: 0px 5px 0px 0px;
+}
+
+
