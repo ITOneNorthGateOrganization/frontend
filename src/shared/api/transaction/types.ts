@@ -5,4 +5,5 @@ export interface Transaction {
   description: string,
   receiverId: number,
   senderId: number,
+  transactionTypeId: number
 }
