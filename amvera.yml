@@ -1,0 +1,5 @@
+build:
+  skip: yes
+run:
+  image: artom557929/frontend-northgate:latest
+  containerPort: 3000
