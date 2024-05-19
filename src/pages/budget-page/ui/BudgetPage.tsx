@@ -21,7 +21,6 @@ const BudgetPage = observer(() => {
           <div className={styles.budMain}>
             <div className={styles.budBudgets}>
               <BudgetBlock/>
-              <BudgetDiagram/>
             </div>
             <BudgetSettings/>
           </div>
