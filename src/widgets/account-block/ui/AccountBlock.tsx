@@ -5,9 +5,10 @@ import IconAdd from "../../../shared/icons/iconAdd.svg";
 import IconMoney from "../../../shared/icons/iconMoney.svg";
 import styles from './styles.module.css';
 
-const AccountBlock = observer(({openEdit}: {openEdit: [boolean, React.Dispatch<React.SetStateAction<boolean>>]}) => {
+const AccountBlock = observer(({openEdit, account}: {openEdit: [boolean, React.Dispatch<React.SetStateAction<boolean>>], account: [number, React.Dispatch<React.SetStateAction<number>>]}) => {
     const {accountStore, transactionStore, categoryStore} = useRootStore();
   const [openDialog, setOpenDialog] = openEdit;
+  const [accountId, setAccountId] = account;
 
     useEffect(() => {
         accountStore.getAccounts();
@@ -37,6 +38,7 @@ const AccountBlock = observer(({openEdit}: {openEdit: [boolean, React.Dispatch<R
                         key={`${account.id}`}
                         onClick={() => {
                             transactionStore.getTransactions(account.id);
+                            setAccountId(account.id);
                         }}>
                         <div>
                             {account.name}

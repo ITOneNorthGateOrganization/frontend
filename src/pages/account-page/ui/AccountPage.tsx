@@ -15,7 +15,7 @@ const AccountPage = observer(() => {
   const openAccount = useState<boolean>(false);
   const openCategory = useState<boolean>(false);
   const openTransaction = useState<boolean>(false);
-
+  const account = useState<number>();
 
   useEffect(() => {
     accountStore.getAccounts();
@@ -30,11 +30,11 @@ const AccountPage = observer(() => {
       <SideBar/>
       <AccountEditModal open={openAccount}/>
       <CategoryEditModal open={openCategory}/>
-      <TransactionEditModal open={openTransaction}/>
+      <TransactionEditModal open={openTransaction} account={account}/>
       <div className={styles.accMainWrapper}>
         <div className={styles.accMain}>
           <div className={styles.accAccountTransaction}>
-            <AccountBlock openEdit={openAccount}/>
+            <AccountBlock openEdit={openAccount} account={account}/>
             <AccountTransactions openEdit={openTransaction}/>
           </div>
 
