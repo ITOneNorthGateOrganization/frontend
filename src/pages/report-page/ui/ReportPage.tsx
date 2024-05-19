@@ -11,86 +11,71 @@ const ReportPage = observer(() => {
     const openCategory = useState<boolean>(false);
     const openTransaction = useState<boolean>(false);
 
-
-
     const data = [
         {
-            "startDate": "2024-05-19T01:55:56.383Z",
-            "endDate": "2024-05-19T01:55:56.383Z",
-            "step": 0,
-            "categories": [
-                {
-                    "categoryId": 0,
-                    "name": "string",
-                    "spends": [
-                        {
-                            "period": "2024-05-19T01:55:56.384Z",
-                            "amount": 7
-                        }
-                    ]
-                }
-            ]
+            id: 8,
+            balance: 100000,
+            bigWaste: 10000,
+            updateAt: '2024-05-18',
+            name: 'Сбер'
         },
         {
-            "startDate": "2024-05-19T02:55:56.383Z",
-            "endDate": "2024-05-19T02:55:56.383Z",
-            "step": 0,
-            "categories": [
-                {
-                    "categoryId": 0,
-                    "name": "string",
-                    "spends": [
-                        {
-                            "period": "2024-05-19T02:55:56.384Z",
-                            "amount": 11
-                        }
-                    ]
-                }
-            ]
+            id: 8,
+            balance: 79432,
+            bigWaste: 5400,
+            updateAt: '2024-05-19',
+            name: 'Сбер'
         },
         {
-            "startDate": "2024-05-19T03:55:56.383Z",
-            "endDate": "2024-05-19T03:55:56.383Z",
-            "step": 0,
-            "categories": [
-                {
-                    "categoryId": 0,
-                    "name": "string",
-                    "spends": [
-                        {
-                            "period": "2024-05-19T03:55:56.384Z",
-                            "amount": 12
-                        }
-                    ]
-                }
-            ]
-        }
+            id: 8,
+            balance: 50000,
+            bigWaste: 0,
+            updateAt: '2024-05-20',
+            name: 'Сбер'
+        },
+        {
+            id: 8,
+            balance: 50000,
+            bigWaste: 15000,
+            updateAt: '2024-05-21',
+            name: 'Сбер'
+        },
+        {
+            id: 8,
+            balance: 35523,
+            bigWaste: 30000,
+            updateAt: '2024-05-21',
+            name: 'Сбер'
+        },
     ];
 
     return (
-        <div className={styles.repMain}>
-            <SideBar/>
-            <ResponsiveContainer width="90%" height="90%">
-                <LineChart
-                    width={500}
-                    height={300}
-                    data={data}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5,
-                    }}
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="startDate" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line type="monotone" dataKey="step" stroke="#82ca9d" />
-                </LineChart>
-            </ResponsiveContainer>
-        </div>
+            <div className={styles.repMain}>
+                <SideBar/>
+                <ResponsiveContainer width="80%"
+                                     height="90%"
+                                     className={styles.repGraph}>
+                    <LineChart
+                        width={500}
+                        height={300}
+                        data={data}
+                        margin={{
+                            top: 5,
+                            right: 30,
+                            left: 20,
+                            bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="updateAt"/>
+                        <YAxis/>
+                        <Tooltip/>
+                        <Legend color={'#FFFFFF'}/>
+                        <Line type="monotone" dataKey="balance" stroke="#8884d8" activeDot={{r: 8}}/>
+                        <Line type="monotone" dataKey="bigWaste" stroke="#82ca9d"/>
+                    </LineChart>
+                </ResponsiveContainer>
+            </div>
     );
 });
 

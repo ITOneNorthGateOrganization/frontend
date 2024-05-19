@@ -162,9 +162,6 @@ input[type="number" i] {
 .setCalendar {
     backdrop-filter: blur(20px) brightness(100%);
     background-color: #ffffffcf;
-    -webkit-box-shadow: 10px 10px 70px -22px rgba(0,0,0,0.58);
-    -moz-box-shadow: 10px 10px 70px -22px rgba(0,0,0,0.58);
-    box-shadow: 10px 10px 70px -22px rgba(0,0,0,0.58);
     height: fit-content;
     width: 300px;
     margin: 60px 0;
