@@ -5,6 +5,7 @@ import {SideBar} from '../../../widgets/side-bar';
 import {BudgetBlock} from '../../../widgets/budget-block';
 import {BudgetDiagram} from '../../../widgets/budget-diagram';
 import {BudgetSettings} from '../../../widgets/budget-settings';
+import styles from './styles.module.css';
 
 const BudgetPage = observer(() => {
   const {budgetStore, userStore} = useRootStore();
@@ -13,11 +14,18 @@ const BudgetPage = observer(() => {
   }, []);
 
   return (
-      <div style={{display: 'flex'}} >
-          <SideBar/>
-          <BudgetBlock/>
-          <BudgetDiagram/>
-          <BudgetSettings/>
+      <div className={styles.budWrapper}>
+        <SideBar/>
+
+        <div className={styles.budMainWrapper}>
+          <div className={styles.budMain}>
+            <div className={styles.budBudgets}>
+              <BudgetBlock/>
+              <BudgetDiagram/>
+            </div>
+            <BudgetSettings/>
+          </div>
+        </div>
       </div>
   );
 });
