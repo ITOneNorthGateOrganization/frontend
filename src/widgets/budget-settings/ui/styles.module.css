@@ -117,13 +117,18 @@
     width: 90px;
     border: none;
     border-bottom: 1px solid white;
-    background-color: transparent;
+    background: transparent;
     color: #FFFFFF;
     outline: none;
     font-family: 'SF Pro Display Medium';
     font-size: 16px;
     height: fit-content;
     text-align: center;
+}
+
+option {
+    background: #9ad6fe;
+    border: none;
 }
 
 input[type="number" i] {

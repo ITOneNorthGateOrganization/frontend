@@ -19,7 +19,8 @@
     border-color: transparent;
     border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.10000000149011612)) 1;
     border-radius: 20px;
-    height: 723px;
+    height: calc(100% - 40px);
+    max-height: 723px;
     width: 504px;
     display: flex;
     justify-content: center;
@@ -73,4 +74,14 @@
     &.load {
          background-color: #7aa2dc;
      }
+}
+
+@media screen and (max-width: 550px){
+    .regBlock {
+        width: 80vw;
+    }
+
+    .regTitle {
+        font-size: 40px;
+    }
 }

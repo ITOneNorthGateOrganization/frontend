@@ -71,15 +71,26 @@
   .mainTitle {
     font-size: 90px;
   }
+
   .mainTitleText {
   font-size: 28px;
- }
+  }
+
+  .mainButtonsStyle {
+    min-width: min-content;
+    flex-direction: column;
+  }
+
+  .mainButtons {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .mainTitle {
     font-size: 48px;
   }
+
   .mainTitleText {
     font-size: 18px;
   }
@@ -89,7 +100,12 @@
   .mainTitle {
     font-size: 36px;
   }
+
   .mainTitleText {
     font-size: 16px;
+  }
+
+  .mainButtons {
+    width: 100%;
   }
 }

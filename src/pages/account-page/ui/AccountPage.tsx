@@ -16,8 +16,6 @@ const AccountPage = observer(() => {
   const openCategory = useState<boolean>(false);
   const openTransaction = useState<boolean>(false);
 
-  console.log(accountStore.accounts);
-  console.log(localStorage.getItem('token'))
 
   useEffect(() => {
     accountStore.getAccounts();
