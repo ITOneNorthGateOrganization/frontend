@@ -1,3 +1,7 @@
 .repMain {
   display: flex;
 }
+
+.repGraph {
+  margin-top: 50px;
+}

@@ -8,25 +8,25 @@ import {BudgetSettings} from '../../../widgets/budget-settings';
 import styles from './styles.module.css';
 
 const BudgetPage = observer(() => {
-  const {budgetStore, userStore} = useRootStore();
-  useEffect(() => {
-    budgetStore.getBudgets();
-  }, []);
+    const {budgetStore, userStore} = useRootStore();
+    useEffect(() => {
+        budgetStore.getBudgets();
+    }, []);
 
-  return (
-      <div className={styles.budWrapper}>
-        <SideBar/>
+    return (
+        <div className={styles.budWrapper}>
+            <SideBar/>
 
-        <div className={styles.budMainWrapper}>
-          <div className={styles.budMain}>
-            <div className={styles.budBudgets}>
-              <BudgetBlock/>
+            <div className={styles.budMainWrapper}>
+                <div className={styles.budMain}>
+                    <div className={styles.budBudgets}>
+                        <BudgetBlock/>
+                    </div>
+                    <BudgetSettings/>
+                </div>
             </div>
-            <BudgetSettings/>
-          </div>
         </div>
-      </div>
-  );
+    );
 });
 
 export {BudgetPage};
