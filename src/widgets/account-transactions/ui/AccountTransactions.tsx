@@ -37,7 +37,10 @@ const AccountTransactions = observer(({openEdit}: {openEdit: [boolean, React.Dis
                   <div
                       className={styles.tranBlockTextInfo}>
                       <div>
-                          {transaction.description}
+                          {transaction.createdAt.toString().split('.')[0]
+                            .replaceAll('-', '.')
+                            .replace('T', ' ')
+                            .replace('Z', '')}
                       </div>
 
                       <div className={styles.tranAccMoney +' '+ (transaction?.transactionTypeId === 1 ? styles.refill : styles.rate)}>

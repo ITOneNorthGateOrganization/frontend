@@ -27,6 +27,15 @@
     gap: 25px;
 }
 
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: gray solid 1px;
+}
+
 .sidePointText {
     color: #000000;
     text-decoration: none;
