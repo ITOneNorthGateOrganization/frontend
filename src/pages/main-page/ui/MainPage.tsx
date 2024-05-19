@@ -23,7 +23,7 @@ const MainPage = () => {
           <div className={styles.mainButtonsStyle}>
             <button className={styles.mainButtons}
                     onClick={() => navigate('/registration')}>
-              Зарегестрироваться
+              Зарегистрироваться
             </button>
 
             <button className={styles.mainButtons}
