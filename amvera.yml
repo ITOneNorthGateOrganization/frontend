@@ -1,12 +1,5 @@
-meta:
-  environment: node
-  toolchain:
-    name: npm
-    version: 18
 build:
-  artifacts:
-    '*': /
+  skip: yes
 run:
-  scriptName: src/index.tsx
-  persistenceMount: /data
+  image: artom557929/frontend-northgate:latest
   containerPort: 3000
