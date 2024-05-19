@@ -7,3 +7,7 @@ export const getCategories = async (): Promise<Category[]> => {
   const {data} = await ApiInstance.get(`${BASE_URL}/categories`);
   return data;
 };
+
+export const create = async (name: string) => {
+  await ApiInstance.post(`${BASE_URL}/categories`, {name: name});
+}

@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 400px;
     min-width: 300px;
-    height: 200px;
+    height: 646px;
 }
 
 .budBlockTitlePos {
@@ -52,3 +52,8 @@
     gap: 5px;
 }
 
+@media screen and (max-width: 1300px) {
+    .budBlock {
+        height: 200px
+    }
+}
