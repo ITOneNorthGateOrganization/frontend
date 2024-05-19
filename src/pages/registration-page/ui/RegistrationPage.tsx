@@ -69,7 +69,7 @@ const RegistrationPage = observer(() => {
                             authStore.reset();
                             setLoading(true);
                       }}>
-                        {loading ? 'Загрузка...' : 'Зарегестрироваться'}
+                        {loading ? 'Загрузка...' : 'Зарегистрироваться'}
                       </button>
                   </div>
               </div>
