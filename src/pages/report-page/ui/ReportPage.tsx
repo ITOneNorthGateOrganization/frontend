@@ -52,29 +52,33 @@ const ReportPage = observer(() => {
     return (
             <div className={styles.repMain}>
                 <SideBar/>
-                <ResponsiveContainer width="80%"
-                                     height="90%"
-                                     className={styles.repGraph}>
-                    <LineChart
-                        width={500}
-                        height={300}
-                        data={data}
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3"/>
-                        <XAxis dataKey="updateAt"/>
-                        <YAxis/>
-                        <Tooltip/>
-                        <Legend color={'#FFFFFF'}/>
-                        <Line type="monotone" dataKey="balance" stroke="#8884d8" activeDot={{r: 8}}/>
-                        <Line type="monotone" dataKey="bigWaste" stroke="#82ca9d"/>
-                    </LineChart>
-                </ResponsiveContainer>
+                <div className={styles.position}>
+                    <div className={styles.repBlock}>
+                        <ResponsiveContainer width="80%"
+                                             height="90%"
+                                             className={styles.repGraph}>
+                            <LineChart
+                                width={500}
+                                height={300}
+                                data={data}
+                                margin={{
+                                    top: 5,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5,
+                                }}
+                            >
+                                <CartesianGrid strokeDasharray="3 3"/>
+                                <XAxis dataKey="updateAt"/>
+                                <YAxis/>
+                                <Tooltip/>
+                                <Legend color={'#FFFFFF'}/>
+                                <Line type="monotone" dataKey="balance" stroke="#8884d8" activeDot={{r: 8}}/>
+                                <Line type="monotone" dataKey="bigWaste" stroke="#82ca9d"/>
+                            </LineChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
             </div>
     );
 });
